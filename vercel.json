@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "./projectshare",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "30mb",
+        "pythonVersion": "3.9",
+        "requirements": "requirements.txt",
+        "command": "python manage.py runserver 0.0.0.0:$PORT"
+      }
+    }
+  ]
+}
