@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "ProjectShare/",
+      "src": "manage.py",
       "use": "@vercel/python",
       "config": {
         "runtime": "python3.6"
@@ -11,8 +11,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/ProjectShare/\g<1>",
-      "methods": ["GET", "HEAD", "OPTIONS"]
+      "dest": "/manage.py"
     }
   ],
   "env": {
