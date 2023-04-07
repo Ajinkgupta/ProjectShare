@@ -1,5 +1,4 @@
-from django.urls import path
-from django.views.generic import RedirectView
+from django.urls import path 
 from . import views
 
 urlpatterns = [
@@ -16,8 +15,7 @@ urlpatterns = [
     path('logout', views.logout, name='logout'),
     path('post/<uuid:id>/', views.single_post, name='single_post'),
     path('post/<uuid:post_id>/add_comment/', views.add_comment, name='add_comment'),
-    path('post/new/', views.post_project, name='post_project'),
-    path('favicon.ico', RedirectView.as_view(url='/static/favicon/favicon.png', permanent=True)),
+    path('post/new/', views.post_project, name='post_project'), 
 
 
 ]
