@@ -7,5 +7,6 @@
   ],
   "env": {
     "DATABASE_URL": "sqlite:///./db.sqlite3"
-  }
+  },
+  "runtime": "python3.6"
 }
