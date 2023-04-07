@@ -1,12 +1,21 @@
 {
   "builds": [
-    { "src": "manage.py", "use": "@vercel/python" }
+    {
+      "src": "ProjectShare/",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.6"
+      }
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/manage.py" }
+    {
+      "src": "/(.*)",
+      "dest": "/ProjectShare/\g<1>",
+      "methods": ["GET", "HEAD", "OPTIONS"]
+    }
   ],
   "env": {
     "DATABASE_URL": "sqlite:///./db.sqlite3"
-  },
-  "runtime": "python3.6"
+  }
 }
