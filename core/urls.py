@@ -16,5 +16,7 @@ urlpatterns = [
     path('post/<uuid:id>/', views.single_post, name='single_post'),
     path('post/<uuid:post_id>/add_comment/', views.add_comment, name='add_comment'),
     path('post/new/', views.post_project, name='post_project'),
+    path('favicon.ico', RedirectView.as_view(url='/static/favicon/favicon.png', permanent=True)),
+
 
 ]
